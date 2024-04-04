@@ -1,9 +1,3 @@
-<script setup lang="ts">
-import UserAuthForm from '@/components/UserAuthForm.vue'
-import { cn } from '@/lib/utils'
-import { buttonVariants } from '@/components/ui/button'
-</script>
-
 <template>
   <div class="md:hidden">
     <VPImage
@@ -45,6 +39,10 @@ import { buttonVariants } from '@/components/ui/button'
       </div>
       <div class="relative z-20 mt-auto">
         <blockquote class="space-y-2">
+          <ChuckNorrisJoke class="text-lg"/>
+          <footer class="text-sm">
+            Source Chuck Norris Jokes API
+          </footer>
           <p class="text-lg">
             &ldquo;This library has saved me countless hours of work and
             helped me deliver stunning designs to my clients faster than
@@ -88,3 +86,10 @@ import { buttonVariants } from '@/components/ui/button'
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import UserAuthForm from "@/components/UserAuthForm/UserAuthForm.vue";
+import ChuckNorrisJoke from "@/components/ChuckNorrisJoke/ChuckNorrisJoke.vue";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+</script>
